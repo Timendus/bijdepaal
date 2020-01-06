@@ -46,6 +46,18 @@ header {
     font-size: 1.4rem;
     color: white; }
 
+#error {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFEEEE;
+  border-top: 3px solid red;
+  padding: 1em;
+  display: none; }
+  #error.active {
+    display: block; }
+
 .location-list {
   list-style: none; }
   .location-list li {
