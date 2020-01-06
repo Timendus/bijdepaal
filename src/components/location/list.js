@@ -25,7 +25,7 @@ function template(list) {
       ${
         list.length > 0 ? list.map(l => `
           <li>
-            <a href='#location-details/${l.id}'>
+            <a href='#location/${l.id}'>
               <span class='name'>${l.name}</span>
               <span class='direction'>
                 <span class='distance'>${distance.human(l.distance)}</span>

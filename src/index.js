@@ -1,7 +1,7 @@
 import Thimbleful from 'thimbleful';
 const router = new Thimbleful.Router();
 
-router.addRoute('location-list', async (a, b, e) => {
+router.addRoute('list', async (a, b, e) => {
   try {
     const list = require('./components/location/list');
     document.getElementById('app').innerHTML = await list.render();
@@ -10,7 +10,7 @@ router.addRoute('location-list', async (a, b, e) => {
   }
 });
 
-router.addRoute(/location\-details\/(.+)/, async (route, matches) => {
+router.addRoute(/location\/(.+)/, async (route, matches) => {
   try {
     const details = require('./components/location/details');
     document.getElementById('app').innerHTML = await details.render(matches[1]);
@@ -21,7 +21,7 @@ router.addRoute(/location\-details\/(.+)/, async (route, matches) => {
 
 window.addEventListener('load', () => {
   if ( !window.location.hash )
-    window.location.hash = 'location-list';
+    window.location.hash = 'list';
 });
 
 function showError(e) {

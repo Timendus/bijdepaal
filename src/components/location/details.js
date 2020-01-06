@@ -18,7 +18,7 @@ module.exports = {
 function template(location) {
   return `
     <header>
-      <span class='left'><a class='back' href='#location-list'></a></span>
+      <span class='left'><a class='back' href='#list'></a></span>
       <h1>${location.name}</h1>
     </header>
 
