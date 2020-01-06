@@ -4,9 +4,7 @@ const storageKey = 'locations';
 const timingKey  = 'locationTimestamp';
 
 const cacheInvalidation = 10 * 60 * 1000; // 10 minutes
-
-// const paaldbUrl = "http://paaldb.timendus.com/api";
-const paaldbUrl = "http://localhost:9441/api";
+const paaldbUrl = "http://paaldb.timendus.com/api";
 
 module.exports = {
   allLocations: () => paalFetch(`${paaldbUrl}/locations`),
