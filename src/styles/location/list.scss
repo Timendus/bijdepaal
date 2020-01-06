@@ -1,0 +1,39 @@
+.location-list {
+  list-style: none;
+
+  li {
+    width: 100%;
+    min-height: 3em;
+    border-bottom: 1px solid #E8E8E8;
+    position: relative;
+
+    a {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 1em 7em 1em 1em;
+      text-decoration: none;
+      color: #333;
+
+      .direction {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        color: #777;
+
+        .bearing {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: #F8F8F8;
+    }
+
+    &:hover {
+      background-color: #EEEEEE;
+    }
+  }
+}
