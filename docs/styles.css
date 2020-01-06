@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body, .app {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Roboto', Tahoma, Arial, sans-serif;
+  font-size: 15px; }
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  min-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #2f419a; }
+  header .left {
+    display: inline-block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    overflow: hidden; }
+    header .left a.back {
+      display: inline-block;
+      width: 100%;
+      height: 100%; }
+      header .left a.back:before {
+        position: absolute;
+        display: inline-block;
+        width: 0px;
+        height: 0px;
+        content: ' ';
+        border: 10px solid transparent;
+        border-right: 10px solid white;
+        left: 10px;
+        top: 15px; }
+  header h1 {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4rem;
+    color: white; }
+
+.location-list {
+  list-style: none; }
+  .location-list li {
+    width: 100%;
+    min-height: 3em;
+    border-bottom: 1px solid #E8E8E8;
+    position: relative; }
+    .location-list li a {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      padding: 1em 7em 1em 1em;
+      text-decoration: none;
+      color: #333; }
+      .location-list li a .direction {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        color: #777; }
+        .location-list li a .direction .bearing {
+          margin-left: 5px; }
+    .location-list li:nth-child(even) {
+      background-color: #F8F8F8; }
+    .location-list li:hover {
+      background-color: #EEEEEE; }
+
+.location-details p {
+  margin: 1em; }
+.location-details .direction .bearing {
+  margin-left: 5px; }
+.location-details ul.maps {
+  list-style: none;
+  margin: 1em; }
+  .location-details ul.maps li {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-right: 0.3em; }
+    .location-details ul.maps li a {
+      display: inline-block;
+      width: 100%;
+      height: 100%; }
+      .location-details ul.maps li a img {
+        width: 100%;
+        height: 100%; }
+
+/*# sourceMappingURL=styles.css.map */

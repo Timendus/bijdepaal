@@ -1,0 +1,16 @@
+{
+  "name": "bijdepaal",
+  "scripts": {
+    "build": "webpack --mode production && npm run styles",
+    "dev": "webpack-dev-server --watch",
+    "styles": "scss ./src/styles/index.scss ./docs/styles.css"
+  },
+  "devDependencies": {
+    "scss": "^0.2.4",
+    "thimbleful": "0.0.2",
+    "watch": "^1.0.2",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
