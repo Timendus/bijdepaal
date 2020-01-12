@@ -4,6 +4,8 @@ const storage = require('./storage');
 const storageKey = 'geolocation';
 
 module.exports = {
+  available: () => !!navigator.geolocation,
+
   get: async () => {
     let location = storage.get(storageKey);
     if ( location ) return JSON.parse(location);

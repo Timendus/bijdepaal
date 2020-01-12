@@ -5,8 +5,13 @@ const distance = require('../../services/distance');
 module.exports = {
   render: async () => {
     try {
-      const pos  = await position.get();
-      const list = await paaldb.getNearest(pos.latitude, pos.longitude, 15);
+      let list;
+      if ( position.available() ) {
+        const pos  = await position.get();
+        list = await paaldb.getNearest(pos.latitude, pos.longitude, 15);
+      } else {
+        list = (await paaldb.allLocations()).slice(0,10);
+      }
       return template(list);
     } catch(e) {
       throw e;
@@ -17,7 +22,7 @@ module.exports = {
 function template(list) {
   return `
     <header>
-      <span class='left'><!-- Logo hier --></span>
+      <!--<span class='left'>Logo hier</span>-->
       <h1>Bij de Paal</h1>
     </header>
 
@@ -27,10 +32,14 @@ function template(list) {
           <li>
             <a href='#location/${l.id}'>
               <span class='name'>${l.name}</span>
-              <span class='direction'>
-                <span class='distance'>${distance.human(l.distance)}</span>
-                <span class='bearing' style='display: inline-block; transform: rotate(${l.bearing}deg)'>↑</span>
-              </span>
+              ${
+                l.distance && l.bearing ? `
+                  <span class='direction'>
+                    <span class='distance'>${distance.human(l.distance)}</span>
+                    <span class='bearing' style='display: inline-block; transform: rotate(${l.bearing}deg)'>↑</span>
+                  </span>
+                ` : ''
+              }
             </a>
           </li>
         `).join('') : `<li>Empty</li>`

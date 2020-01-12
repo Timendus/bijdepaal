@@ -7,7 +7,7 @@ const cacheInvalidation = 10 * 60 * 1000; // 10 minutes
 const paaldbUrl = "http://paaldb.timendus.com/api";
 
 module.exports = {
-  allLocations: () => paalFetch(`${paaldbUrl}/locations`),
+  allLocations: () => locations(),
   location:     id => paalFetch(`${paaldbUrl}/locations/${id}`),
   getNearest:   async (latitude, longitude, num) => {
     let list;
