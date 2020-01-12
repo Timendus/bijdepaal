@@ -24,7 +24,7 @@ header {
       height: 100%;
 
       &:before {
-        $size: 10px;
+        $size: 8px;
         position: absolute;
         display: inline-block;
         width: 0px;
@@ -39,10 +39,15 @@ header {
   }
 
   h1 {
+    margin: 0 1em;
     display: inline-block;
     height: $height;
     line-height: $height;
     font-size: 1.4rem;
     color: white;
+  }
+
+  .left ~ h1 {
+    margin: 0;
   }
 }
