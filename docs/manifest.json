@@ -1,0 +1,21 @@
+{
+  "name": "Bij de Paal",
+  "short_name": "Bij de Paal",
+  "description": "Vind paalkampeerplekken bij jou in de buurt",
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#2f419a",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/manifest/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/manifest/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

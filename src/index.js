@@ -1,6 +1,9 @@
 import Thimbleful from 'thimbleful';
 const router = new Thimbleful.Router();
 
+const pwa = require('./pwa_install');
+pwa.listen();
+
 router.addRoute('list', async (a, b, e) => {
   try {
     const list = require('./components/location/list');

@@ -4,7 +4,8 @@ module.exports = {
   mode: 'development',
 
   entry: {
-    'index': './src/index.js'
+    'index': './src/index.js',
+    'service_worker': './src/service_worker.js'
   },
 
 	output: {
