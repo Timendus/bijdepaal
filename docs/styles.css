@@ -35,16 +35,19 @@ header {
         width: 0px;
         height: 0px;
         content: ' ';
-        border: 10px solid transparent;
-        border-right: 10px solid white;
-        left: 10px;
-        top: 15px; }
+        border: 8px solid transparent;
+        border-right: 8px solid white;
+        left: 13px;
+        top: 17px; }
   header h1 {
+    margin: 0 1em;
     display: inline-block;
     height: 50px;
     line-height: 50px;
     font-size: 1.4rem;
     color: white; }
+  header .left ~ h1 {
+    margin: 0; }
 
 #error {
   position: fixed;
